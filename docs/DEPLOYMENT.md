@@ -7,13 +7,14 @@ container and one private database.
 ## Best route for the challenge: Render
 
 Use the root \`render.yaml\` Blueprint. It provisions a Frankfurt Docker web
-service and PostgreSQL database, injects the private connection string, runs the
-idempotent migration before each release, and monitors \`/api/health\`.
+service and PostgreSQL database, injects the private connection string, and
+monitors \`/api/health\`. The app container applies its idempotent migration at
+startup.
 
 1. Push the repository to GitHub.
 2. Open \`https://render.com/deploy?repo=https://github.com/artem-musii/save-my\`.
 3. Review the two resources and create the Blueprint.
-4. Wait for both resources and the pre-deploy migration to become healthy.
+4. Wait for both resources and the startup migration to become healthy.
 5. Open the generated \`onrender.com\` URL in a signed-out browser.
 6. Test anonymous demo isolation, judge login, secure cookies, response headers,
    and all 18 native Site Tools in the ChatGPT in-app browser.
@@ -37,6 +38,20 @@ and build process.
    Coolify environment UI instead of committing them.
 5. Map the app domain to container port 3000. Coolify’s proxy terminates HTTPS.
 6. Back up the PostgreSQL volume before the judging period and before upgrades.
+
+When PostgreSQL is already running as a dedicated Coolify service, deploy this
+repository as a Dockerfile application rather than as the Compose stack. Set:
+
+- \`DATABASE_URL\` to the database service's private-network URL.
+- \`PORT=3000\` and expose container port 3000 through Coolify's proxy.
+- \`TEST_USER_EMAIL\` and a strong \`TEST_USER_PASSWORD\` for judging.
+- \`RUN_DB_MIGRATIONS=true\` on one app instance. The image retries the migration
+  while PostgreSQL starts; set it to \`false\` only if migrations are managed by
+  a separate release job.
+
+No Redis, worker, object-storage, or frontend container is required. Coolify's
+existing proxy handles HTTPS. Add a separate backup target for PostgreSQL; a
+database volume alone is not a backup.
 
 You do not need to buy a domain for the submission: a stable HTTPS platform
 subdomain is accepted. Buy a domain if the project will live beyond the

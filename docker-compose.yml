@@ -26,12 +26,6 @@ services:
     depends_on:
       postgres:
         condition: service_healthy
-    command:
-      [
-        "sh",
-        "-c",
-        "bun src/infrastructure/database/migrate.ts && bun src/server/index.ts",
-      ]
 
 volumes:
   save_my_postgres:

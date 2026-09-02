@@ -1,8 +1,16 @@
 .git
+.github
 .env
+.env.*
+!.env.example
 node_modules
 dist
+artifacts
 playwright-report
 test-results
 coverage
 *.tsbuildinfo
+*.log
+.DS_Store
+.idea
+.vscode

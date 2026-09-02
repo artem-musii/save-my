@@ -5,7 +5,6 @@ services:
     plan: free
     region: frankfurt
     dockerfilePath: ./Dockerfile
-    preDeployCommand: bun src/infrastructure/database/migrate.ts
     healthCheckPath: /api/health
     envVars:
       - key: NODE_ENV

@@ -103,8 +103,8 @@ accessibility checks.
 ## Deploy it
 
 The fastest hackathon path is the included Render Blueprint. It creates a
-single Docker web service and PostgreSQL 17 database, runs the migration before
-deploy, and checks `/api/health`.
+single Docker web service and PostgreSQL 17 database. The app image applies its
+idempotent migration at startup and Render checks `/api/health`.
 
 [![Deploy to Render](https://render.com/images/deploy-to-render-button.svg)](https://render.com/deploy?repo=https://github.com/artem-musii/save-my)
 
