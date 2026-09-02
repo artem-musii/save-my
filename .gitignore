@@ -1,0 +1,14 @@
+node_modules
+dist
+.env
+.env.*
+!.env.example
+.DS_Store
+playwright-report
+test-results
+coverage
+*.tsbuildinfo
+*.log
+.idea
+.vscode
+artifacts

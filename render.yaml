@@ -1,0 +1,29 @@
+services:
+  - type: web
+    name: save-my
+    runtime: docker
+    plan: free
+    region: frankfurt
+    dockerfilePath: ./Dockerfile
+    preDeployCommand: bun src/infrastructure/database/migrate.ts
+    healthCheckPath: /api/health
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: DATABASE_URL
+        fromDatabase:
+          name: save-my-db
+          property: connectionString
+      - key: TEST_USER_EMAIL
+        value: judge@savemy.systems
+      - key: TEST_USER_PASSWORD
+        value: SaveMy-Judge-2026
+
+databases:
+  - name: save-my-db
+    plan: free
+    region: frankfurt
+    databaseName: save_my
+    user: save_my
+    postgresMajorVersion: "17"
+    ipAllowList: []

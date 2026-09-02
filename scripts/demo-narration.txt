@@ -1,0 +1,15 @@
+Small teams rarely know which person, device, approval, or recovery path has quietly become infrastructure. SAVE MY makes that dependency visible before it becomes an incident.
+
+This is Diamond Apps, a fictional company with forty people, systems, accounts, documents, and workflows connected in one continuity map. The map is useful on its own, without an agent.
+
+Here I am opening a stored rehearsal. The founder and their personal phone are unavailable for seven days. The graph engine calculates the cascade deterministically and shows exactly which critical work stops. This is not an AI score, and the scenario never edits the company baseline.
+
+In a WebMCP-capable browser, this page exposes eighteen narrow Site Tools. The agent can read a bounded summary, resolve exact item IDs, validate the map, focus the graph, and run the same deterministic scenario. Every execution is visible in the product call log, with its input, result, and status.
+
+The agent can also stage a complete repair. This proposal adds shared release custody and connects it to the existing access, signing, recovery, and delegation paths. The backend rejects dangling or cosmetic changes and proves the proposed graph restores every blocked critical workflow.
+
+The Before view stays honest: the company is still broken. The After view shows the inferred items and paths as ghosts, separate from the baseline. I can inspect every exact change and adjust the proposal before anything becomes fact.
+
+Only the visible human action applies the repair. The agent cannot accept its own work, verify access, assign final responsibility, or delete a workspace.
+
+The agent structures intent. The graph engine proves impact. The person remains the authority. Map. Break. Repair. Verify. SAVE MY.

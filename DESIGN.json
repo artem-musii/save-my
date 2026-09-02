@@ -1,0 +1,62 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-08-31T23:00:00+02:00",
+  "title": "Design System: SAVE MY…",
+  "tokens": {
+    "colors": {
+      "field": "oklch(7.5% 0.006 190)",
+      "surface": "oklch(10.5% 0.007 185)",
+      "raised": "oklch(14% 0.008 185)",
+      "line": "oklch(24% 0.008 185)",
+      "lineStrong": "oklch(39% 0.01 185)",
+      "text": "oklch(95.5% 0.006 96)",
+      "textMuted": "oklch(66% 0.008 185)",
+      "blocked": "oklch(67% 0.18 35)",
+      "uncertainty": "oklch(79% 0.13 82)"
+    },
+    "typography": {
+      "interface": "Inter, system-ui, sans-serif",
+      "evidence": "Martian Mono, ui-monospace, monospace"
+    },
+    "motion": {
+      "control": "160ms cubic-bezier(0.2, 0, 0, 1)",
+      "panel": "220ms ease-out",
+      "camera": "360ms cubic-bezier(0.22, 1, 0.36, 1)",
+      "cascade": "110ms per deterministic depth"
+    },
+    "radius": { "control": "999px", "surface": "faceted" }
+  },
+  "components": [
+    {
+      "name": "Company Sidebar",
+      "purpose": "Full-name company switching and stable section navigation."
+    },
+    {
+      "name": "Continuity Graph Node",
+      "purpose": "Image-backed, two-line faceted 3D graph entity with type-specific geometry, semantic state, and an offset depth plane."
+    },
+    {
+      "name": "Scenario Library",
+      "purpose": "Stored disruptions modeled separately from the baseline."
+    },
+    {
+      "name": "Entity Inspector",
+      "purpose": "Readable ownership, schedule, connection, edit, and reschedule details."
+    },
+    {
+      "name": "Human Proposal Boundary",
+      "purpose": "Keeps agent drafts reversible until a visible human decision."
+    }
+  ],
+  "narrative": {
+    "northStar": "The incident table",
+    "overview": "A severe near-black operational field makes evidence, ownership, and causal motion legible. Monochrome editorial imagery and faceted code-native geometry turn each entity into a spatial object without becoming a neon dashboard.",
+    "rules": [
+      "Baseline, scenario, and proposal are always explicit separate states.",
+      "The graph camera can never leave the viewport blank.",
+      "Manual edits apply now; agent edits are staged for human review.",
+      "Vermilion and amber are the only semantic accents and are paired with text, structure, or motion.",
+      "Mobile retains both the graph and a visible accessible list."
+    ]
+  }
+}
